@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple video library to watch and organize videos on your device.">
+  <title>Loop — Your video space</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="ads-config.js"></script>
+  <script src="ads.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-button menu-button" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <a class="brand" href="#" aria-label="Loop home"><span class="brand-icon" aria-hidden="true">▶</span><span>loop</span><small>LOCAL</small></a>
+    <form class="search" id="search-form" role="search"><input id="search-input" type="search" placeholder="Search your videos" aria-label="Search your videos"><button type="submit" aria-label="Search">⌕</button></form>
+    <button class="upload-button" id="upload-trigger"><span aria-hidden="true">＋</span> <span>Upload videos</span></button>
+    <input class="visually-hidden" id="video-files" type="file" accept="video/*" multiple>
+    <button class="profile" aria-label="Your profile">K</button>
+  </header>
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <a class="side-link active" href="#"><span>⌂</span> Home</a>
+    <a class="side-link" href="#your-videos"><span>▣</span> Your videos</a>
+    <div class="side-rule"></div>
+    <p class="side-label">YOUR SPACE</p>
+    <p class="sidebar-note">Videos you choose stay on this device.</p>
+    <div class="sidebar-bottom"><span class="brand-icon">▶</span><span>Loop Local</span><small>Personal video library</small></div>
+  </aside>
+  <main class="main-content">
+    <section class="welcome" aria-labelledby="page-title">
+      <div><p class="overline">YOUR PERSONAL VIDEO SPACE</p><h1 id="page-title">Watch what <em>moves you.</em></h1><p>Pick videos from your device and keep them together in one place.</p></div>
+      <button class="welcome-upload" id="welcome-upload"><span>＋</span> Add videos</button>
+    </section>
+    <nav class="filters" aria-label="Video filters"><button class="filter-chip selected" data-filter="all">All</button><button class="filter-chip" data-filter="recent">Recently added</button><button class="filter-chip" data-filter="large">Long videos</button></nav>
+    <section class="ad-placement ad-banner" aria-label="Advertisement"><span class="ad-tag">ADVERTISEMENT</span><div class="ad-content" data-ad-slot="banner"><strong>Ad space</strong><span>Connect an approved AdSense account to show ads here.</span></div></section>
+    <section id="your-videos" class="library" aria-live="polite">
+      <div class="empty-state" id="empty-state"><div class="empty-illustration"><span class="play-shape">▶</span><span class="sun-shape"></span></div><h2>Your next favorite starts here</h2><p>Add video files from your device to build your personal library.</p><button class="welcome-upload" id="empty-upload"><span>＋</span> Choose videos</button><small>Your files stay in this browser session. Nothing is uploaded online.</small></div>
+      <div class="video-grid" id="video-grid"></div>
+      <p class="no-results" id="no-results" hidden>No videos match your search. Try another title.</p>
+    </section>
+    <footer class="privacy-note"><span aria-hidden="true">🔒</span> Private by default · Videos preview locally in your browser</footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
