@@ -1,8 +1,8 @@
-/* Add the IDs from your approved AdSense ad units here. Leave blank to keep preview placeholders. */
+/* AdSense publisher and responsive display ad units. Ads serve after site approval. */
 window.LOOP_ADS = {
-  publisherId: '', // Example format: ca-pub-1234567890123456
+  publisherId: 'ca-pub-7663601985278235',
   slots: {
-    banner: '', // Numeric ad slot ID for the banner placement
-    library: '' // Numeric ad slot ID for the video library placement
+    banner: '7842511082',
+    library: '6529429417'
   }
 };
